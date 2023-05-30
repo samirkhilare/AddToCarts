@@ -1,0 +1,19 @@
+li{
+    list-style-type:none ;
+}
+
+.image-container {
+    overflow: hidden;
+    
+  }
+  
+  .zoom-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-image:hover {
+    transform: scale(1.1);
+  }
+  .shadow-image {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }

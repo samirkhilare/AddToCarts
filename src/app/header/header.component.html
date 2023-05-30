@@ -1,0 +1,49 @@
+<nav class="nav">
+    <h1><b>Fashi</b> <i class="bi bi-stop-fill" style="color: orange;font-size: small;"></i></h1>
+    <div class="nav-search">
+        <select class="select">
+            <option selected>All Categories</option>
+            <option value="1">Boys</option>
+            <option value="2">Girls</option>
+            <option value="3">Teenage</option>
+          </select>
+        <input type="text" placeholder="What Do You Need?"  (keyup)="search2($event)" />
+        <button><i class="bi bi-search"></i></button>
+    </div>
+    <ul >
+       
+        <li><i class="bi bi-suit-heart"></i> </li>
+        <li routerLink="cart"><i class="bi bi-bag"></i><span class="badge badge-primary" ></span>{{cartCount}} </li>
+    </ul>
+<!-- 
+    <ul>
+        <li><i class="bi bi-suit-heart"></i></li>
+        <li routerLink="cart">
+          <i class="bi bi-bag"></i>
+          <span class="badge badge-primary">{{ cartCount }}</span>
+          <span *ngIf="cartCount !== previousLength">
+            ({{ cartCount > previousLength ? '+' : '-' }}{{ getLengthDifference() }})
+          </span>
+        </li>
+      </ul> -->
+      
+</nav> 
+<br>
+<nav class="navbar  bg-dark" data-bs-theme="dark " >
+   
+    
+    <ul class="nav justify-content-center " >
+        <li class="nav-item" >
+            <a class="nav-link"><i class="bi bi-list"></i>&nbsp;&nbsp;&nbsp;  ALL DEPARTMENTS &nbsp;&nbsp;&nbsp; <i class="bi bi-chevron-compact-down"></i></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="" class="nav-link" >HOME</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="cart" class="nav-link" >CART</a>
+        </li>
+        
+     
+      </ul>
+  
+  </nav>

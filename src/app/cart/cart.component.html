@@ -1,0 +1,41 @@
+<div *ngFor="let data of dataArray">
+  <table class="table  .table-striped">
+    <tbody>
+      <tr>
+        <td><img src="{{data.imageURL}}" style="height: 150px;width: 150px;" class="zoom-image shadow-image"></td>
+        <td>
+          <h2>
+            <li>
+              {{data.name}}
+            </li>
+            <li>
+              {{data.brand}}
+            </li>
+            
+          </h2>
+        </td>
+        <td>
+          <h2>
+          
+            <li> Quantity : <button type="button" class="btn btn-info" (click)="qtyDcr(data)"><i class="bi bi-dash-square-dotted"></i></button> {{data.qty}} <button type="button" class="btn btn-warning" (click)="qtyInc(data)"><i class="bi bi-plus-square-dotted"></i></button></li>
+            &nbsp;&nbsp;
+            <li>
+              Price : {{data.price | currency:"INR"}} 
+            </li>
+            <hr>
+            <li>
+             Total Price : {{data.total | currency:"INR"}} 
+            </li>
+          </h2>
+        </td>
+        <td>
+          <h2>
+            <li> <button type="button" class="btn btn-danger" (click)="delete(data.id)">Remove Product <i class="bi bi-trash"></i></button></li>&nbsp;
+            <li> <button type="button" class="btn btn-success" routerLink="" >Replace Product <i class="bi bi-arrow-clockwise"></i></button></li>
+          </h2>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

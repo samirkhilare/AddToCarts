@@ -1,0 +1,128 @@
+<div class="container">
+<ul>
+  <li *ngFor="let item of cartArray | search2: searchString">
+    <div class="card" style="width: 18rem;">
+      <img [src]="item.imageURL" class="card-img-top" >
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text"><b>{{ item.brand }}</b></p>
+        <a class="btn btn-primary" (click)="addToCart(item)">Add To Cart</a>&nbsp;
+        <a href="#" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <div class="mb-3 col-3">
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm">
+    </div>
+    <table style="border: 1px solid grey;">
+      <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Age</th>
+      </tr>
+      <tbody *ngFor="let data of user | search: searchTerm; let i = index">
+        <tr>
+          <td>{{ data?.name }}</td>
+          <td>{{ data?.mobile }}</td>
+          <td>{{ data?.add }}</td>
+          <td>{{ data?.age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   -->
+
+
+<!-- <form [formGroup]="formdata" ngSubmit="submit()" >
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">First Name</span>
+        <input type="text" class="form-control" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Last Name</span>
+        <input type="text" class="form-control" placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Location</span>
+        <input type="text" class="form-control" placeholder="Location" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <button type="button" class="btn btn-outline-success">Success</button>
+</form> -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h3>List Of Data</h3>
+                    <div class="card-body">
+                        <table class="table col">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Mobile No</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of dataarray">
+                                    <td>{{item.fname}}</td>
+                                    <td>{{item.lname}}</td>
+                                    <td>{{item.mno}}</td>
+                                    <td>{{item.addres}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h3>Add Data</h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <form [formGroup]="localdata">
+                                <div class="mb-3 col-3">
+                                  <label for="exampleInputEmail1" class="form-label">First Name</label>
+                                  <input type="text" class="form-control" formControlName="fname" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3 col-3 ">
+                                  <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                                  <input type="text" class="form-control" formControlName="lname" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3 col-3">
+                                    <label for="exampleInputPassword1" class="form-label">Mobile No</label>
+                                    <input type="text" class="form-control" formControlName="mno" id="exampleInputPassword1">
+                                  </div>
+                                  <div class="mb-3 col-3">
+                                    <label for="exampleInputPassword1" class="form-label">Address</label>
+                                    <input type="text" class="form-control" formControlName="addres" id="exampleInputPassword1">
+                                  </div>
+                                <button type="submit" class="btn btn-primary" (click)="onSave()">Submit</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

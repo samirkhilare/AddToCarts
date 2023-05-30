@@ -1,0 +1,36 @@
+.container ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .container li {
+    flex-basis: calc(33.33% - 20px);
+    padding: 0;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-img-top {
+    transition: transform 0.3s ease;
+  }
+  
+  /* .card:hover .card-img-top {
+    transform: scale(1.2);
+  } */
+  
