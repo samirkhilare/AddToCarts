@@ -30,7 +30,7 @@
     {
       "name": "Denim Jacket",
       "brand": "Brand",
-      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//d/p/dp_1335.jpg",
+      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//d/p/dp_1527.jpg",
       "id": 4,
       "qty": 1,
       "price": 1500,
@@ -39,32 +39,23 @@
     {
       "name": "Denim Jacket",
       "brand": "Brand",
-      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//d/p/dp_1335.jpg",
+      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//d/p/dp_1527.jpg",
       "id": 5,
       "qty": 1,
       "price": 1500,
       "total": 1500
+    },
+    {
+      "name": "Printed Shirt",
+      "brand": "Brand",
+      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//d/p/dp_1508_2.jpg",
+      "id": 3,
+      "qty": 1,
+      "price": 600,
+      "total": 600
     }
   ],
   "cart": [
-    {
-      "name": "Denim Jeans",
-      "brand": "Brand",
-      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//3/_/3_1279.jpg",
-      "id": 1,
-      "qty": 1,
-      "price": 1200,
-      "total": 1200
-    },
-    {
-      "name": "Denim Jacket",
-      "brand": "Brand",
-      "imageURL": "https://api.powerlook.in/pub/media/catalog/product//d/p/dp_1527.jpg",
-      "id": 2,
-      "qty": 1,
-      "price": 800,
-      "total": 800
-    },
     {
       "name": "Printed Shirt",
       "brand": "Brand",

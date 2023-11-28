@@ -10,51 +10,53 @@ import { Router } from '@angular/router';
 export class CartComponent implements OnInit {
 
 
-  dataArray:any[]=[];
+  dataArray: any[] = [];
 
-  constructor (private cart:CartService , private route:Router) {}
+  constructor(private cart: CartService, private route: Router) { }
 
-  ngOnInit(){
-      this.getData();
+  ngOnInit() {
+
+    this.getData();
   }
 
   getData() {
     this.cart.get().subscribe((data: any) => {
       this.dataArray = data;
-      console.log(data,"samir");
-      
+      console.log(data, "samir");
+
+
     });
   }
 
-  qtyInc(data:any){
-    if (data.qty <10)
-    data.qty++
-    data.total = data.qty*data.price
-    this.cart.update(data).subscribe((data:any)=>{
+  qtyInc(data: any) {
+    if (data.qty < 10)
+      data.qty++
+    data.total = data.qty * data.price
+    this.cart.update(data).subscribe((data: any) => {
 
     })
 
-    
+
   }
 
-  qtyDcr(data:any){
-   if (data.qty >1)
-   data.qty-- 
+  qtyDcr(data: any) {
+    if (data.qty > 1)
+      data.qty--
 
-   data.total = data.qty*data.price
-   this.cart.update(data).subscribe((data:any)=>{
-     
-   })
+    data.total = data.qty * data.price
+    this.cart.update(data).subscribe((data: any) => {
+
+    })
   }
 
-  delete(id:any){
-    this.cart.remove(id).subscribe((data:any)=>{
+  delete(id: any) {
+    this.cart.remove(id).subscribe((data: any) => {
 
     })
     this.getData();
   }
 
-  
+
 
 
 }

@@ -1,7 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { CartService } from '../cart.service';
 import { CartItem } from '../cart-item';
+
 
 
 @Component({
@@ -12,21 +13,23 @@ import { CartItem } from '../cart-item';
 export class HomeComponent implements OnInit {
 
 
-  constructor(private api:ApiService,private cart:CartService){}
+  constructor(private api: ApiService, private cart: CartService) { }
 
 
-  cartArray:any[]=[];
-  searchString:any
+  cartArray: any[] = [];
+  searchString: any
 
   ngOnInit() {
-   this.getData();
-   this.api.search.subscribe((data:any)=>{
-    this.searchString=data
-   })
+    debugger
+    this.getData();
+
+    this.api.search.subscribe((data: any) => {
+      this.searchString = data
+    })
   }
 
-  getData(){
-    this.api.getdata().subscribe((data:any)=>{
+  getData() {
+    this.api.getdata().subscribe((data: any) => {
       console.log(data);
       this.cartArray = data
 
@@ -36,8 +39,8 @@ export class HomeComponent implements OnInit {
 
   addToCart(item: CartItem) {
     this.cart.add(item).subscribe((data: any) => {
-      
     });
+    window.location.reload()
   }
 
 
@@ -57,19 +60,19 @@ export class HomeComponent implements OnInit {
   //       addres:new FormControl("",[Validators.required])
   //   })
   //  }
-   
+
 
   // localdata!: FormGroup;
   // ngOnInit(): void {
-  
+
   //   this.get();
   // }
-  
+
   // get(){
   //   this.httpss.getdata().subscribe((data:any)=>{
   //     this.dataarray=data;
   //     console.log(data,"samir");
-      
+
   //   })
   // }
 
@@ -78,7 +81,7 @@ export class HomeComponent implements OnInit {
   //     console.log(res);
   //     console.log("working");
   //     this.localdata.reset();
-      
+
   //   });
   // }
 
@@ -86,10 +89,10 @@ export class HomeComponent implements OnInit {
 
   // }
 
-  
 
 
-  searchTerm:any;
+
+  searchTerm: any;
   // user:any[]=[
   //   {name:"samir",mobile:9970562207,add:"pune",age:24},
   //   {name:"karan",mobile:9970562207,add:"pune",age:18},
